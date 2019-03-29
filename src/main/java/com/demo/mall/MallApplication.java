@@ -1,11 +1,12 @@
 package com.demo.mall;
 
-import org.mybatis.spring.annotation.MapperScan;
+
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.demo.mall.mapper")
+@MapperScan(basePackages = {"com.demo.mall.utils","com.demo.mall.mapper"})
 public class MallApplication {
 
     public static void main(String[] args) {

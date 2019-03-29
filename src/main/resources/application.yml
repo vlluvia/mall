@@ -1,3 +1,6 @@
+server:
+    port: 8081
+
 spring:
     application:
         name: mall
@@ -25,13 +28,13 @@ spring:
 mybatis:
     type-aliases-package: com.demo.mall.entities
     mapper-locations: classpath:mapper/*.xml
-#ÅäÖÃÍ¨ÓÃmapper
+#ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½mapper
 mapper:
     identity: mysql
     not-empty: true
     mappers: com.demo.mall.utils.BaseMapper
 
-#ÅäÖÃ·ÖÒ³²å¼ş
+#ï¿½ï¿½ï¿½Ã·ï¿½Ò³ï¿½ï¿½ï¿½
 pagehelper:
     reasonable: true
     support-methods-arguments: true
