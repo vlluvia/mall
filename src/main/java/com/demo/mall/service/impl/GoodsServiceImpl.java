@@ -46,7 +46,10 @@ public class GoodsServiceImpl implements GoodsService {
 
         List<UserGoodsTypeLike> likes = userGoodsTypeLikeDao.getUserGoodsTypeLike(id);
         Random ra =new Random();
-        int i =ra.nextInt(likes.size());
+        int i =0;
+        if (likes.size()!=0){
+            i = ra.nextInt(likes.size());
+        }
         List<Goods> goods = goodsDao.findByGoodsTypeId(i==0?1:i);
         List<GoodsVo> goodsVos = new ArrayList<>();
         goods.forEach(g->{
