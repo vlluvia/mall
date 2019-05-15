@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 @Service
 public class TestImpl implements TestService {
 
+
     @Resource
     private TestDao testDao;
 

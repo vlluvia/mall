@@ -1,21 +1,22 @@
-package com.demo.mall.vo;
+package com.demo.mall.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.io.Serializable;
-
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @ToString
-public class UserVo implements Serializable {
-
-    private String nickname;
+public class CommentDto {
 
     private String token;
 
-    private boolean isAdmin;
+    private int starValue;
+
+    private String comment;
+
+    private int goodsId;
+
 }

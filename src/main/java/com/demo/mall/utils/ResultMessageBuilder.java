@@ -2,9 +2,8 @@ package com.demo.mall.utils;
 
 
 /**
- * result message builder
+ * 返回格式化，确保格式统一
  */
-
 public class ResultMessageBuilder {
 
     /**

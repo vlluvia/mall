@@ -5,17 +5,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Column;
 import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UserVo implements Serializable {
+public class UsersVo  implements Serializable {
+
+    private int id;
+
+    private String account;
 
     private String nickname;
 
-    private String token;
+    private String recipient;
 
-    private boolean isAdmin;
+    private String phone;
+
+    private String address;
+
+    private String userImg;
 }

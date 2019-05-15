@@ -43,6 +43,8 @@ public class User {
     @Column(name = "user_img")
     private String userImg;
 
+    private boolean isAdmin;
+
     public User(UserDto user) {
         this.account = user.getAccount();
         this.password = user.getPwd();
