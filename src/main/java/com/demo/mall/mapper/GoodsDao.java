@@ -81,7 +81,10 @@ public interface GoodsDao  extends BaseMapper<Goods> {
             " values(#{goodsTypeId},#{goodsName},#{goodsSrc},#{goodsDesc},#{price})")
     @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     int addGoods(Goods goods);
-
+    @Update("insert into goods(goods_type_id,goods_name,goods_src,goods_desc,goods_price)" +
+            " values(#{goodsTypeId},#{goodsName},#{goodsSrc},#{goodsDesc},#{price})")
+    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
+    int updateGood(Goods goods);
     @Insert("insert into goods_detail(goods_id,goods_size_name,goods_size_price,goods_stock)" +
             " values(#{goodsId},#{goodsSizeName},#{goodsSizePrice},#{goodsStock})")
     void addGoodsDetail(GoodsDetail goodsDetail);

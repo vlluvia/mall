@@ -1,6 +1,7 @@
 package com.demo.mall.service;
 
 import com.demo.mall.dto.GoodsAddDto;
+import com.demo.mall.dto.GoodsUpdateDto;
 import com.demo.mall.vo.AdminGoodsVo;
 import com.demo.mall.vo.GoodsDetailVo;
 import com.demo.mall.vo.GoodsVo;
@@ -21,6 +22,8 @@ public interface GoodsService {
     void getGoodsDel(int goodsId);
 
     void addGoods(GoodsAddDto goodsAddDto);
+
+    void updateGoods(GoodsUpdateDto goodsUpdateDto);
 
     AdminGoodsVo getGoodsDetailAdminById(int id);
 
