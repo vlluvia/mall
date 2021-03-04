@@ -1,6 +1,5 @@
 package com.demo.mall.mapper;
 
-import com.demo.mall.entities.Test;
 import com.demo.mall.entities.User;
 import com.demo.mall.utils.BaseMapper;
 import com.demo.mall.vo.UsersVo;

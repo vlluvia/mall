@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int updateUser(UserInfoDto userInfoDto,int userId) {
+    public int updateUser(UserInfoDto userInfoDto, int userId) {
 
         String[] s = userInfoDto.getUserGoodsTypeLike();
         userGoodsTypeLikeDao.deleteByUserId(userId);

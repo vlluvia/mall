@@ -6,7 +6,6 @@ import com.demo.mall.service.CommentService;
 import com.demo.mall.service.TokenService;
 import com.demo.mall.utils.ResultMessageBuilder;
 import com.demo.mall.vo.CommentVo;
-import com.demo.mall.vo.GoodsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

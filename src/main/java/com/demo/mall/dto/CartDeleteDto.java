@@ -9,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @ToString
-public class CartDeleteDto extends TokenDto{
+public class CartDeleteDto extends TokenDto {
 
     private int cartId;
 }

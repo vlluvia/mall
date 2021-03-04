@@ -4,7 +4,6 @@ import com.demo.mall.entities.Orders;
 import com.demo.mall.utils.BaseMapper;
 import org.apache.ibatis.annotations.*;
 
-import javax.persistence.Column;
 import java.util.List;
 
 public interface OrderDao extends BaseMapper<Orders> {

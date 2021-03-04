@@ -9,13 +9,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @ToString
-public class CartAddDto extends TokenDto {
-
-
-    private int goodsId;
-
-    private int specId;
-
-    private int count;
-
+public class CityAddDto  extends TokenDto {
+    private String city_name;
 }

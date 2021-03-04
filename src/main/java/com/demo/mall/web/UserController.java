@@ -1,6 +1,9 @@
 package com.demo.mall.web;
 
-import com.demo.mall.dto.*;
+import com.demo.mall.dto.TokenDto;
+import com.demo.mall.dto.UserDeleteDao;
+import com.demo.mall.dto.UserDto;
+import com.demo.mall.dto.UserInfoDto;
 import com.demo.mall.entities.User;
 import com.demo.mall.service.TokenService;
 import com.demo.mall.service.UserService;
@@ -14,8 +17,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * 用户管理接口

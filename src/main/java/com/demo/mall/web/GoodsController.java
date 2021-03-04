@@ -3,7 +3,6 @@ package com.demo.mall.web;
 import com.demo.mall.dto.GoodsAddDto;
 import com.demo.mall.dto.GoodsUpdateDto;
 import com.demo.mall.dto.TokenDto;
-import com.demo.mall.dto.UserDto;
 import com.demo.mall.entities.User;
 import com.demo.mall.service.GoodsService;
 import com.demo.mall.service.TokenService;
@@ -14,7 +13,6 @@ import com.demo.mall.vo.GoodsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**
@@ -45,8 +43,7 @@ public class GoodsController {
      * @return
      */
     @PostMapping("/api/goods/hotGoodsList")
-    public ResultMessageBuilder.ResultMessage
-    gethotGoodsList(@RequestBody TokenDto tokenDto) {
+    public ResultMessageBuilder.ResultMessage gethotGoodsList(@RequestBody TokenDto tokenDto) {
         User user = tokenService.explainToken(tokenDto.getToken());
         if (user != null) {
             List<GoodsVo> goodsVo = goodsService.getHotGoodsList(user.getId());
@@ -101,14 +98,14 @@ public class GoodsController {
         return ResultMessageBuilder.success("添加成功");
     }
     /**
-     * 修改商品
+     * 添加商品
      * @param goodsUpdateDto
      * @return
      */
     @PostMapping("/api/goods/update")
     public ResultMessageBuilder.ResultMessage updateGoods(@RequestBody GoodsUpdateDto goodsUpdateDto) {
         goodsService.updateGoods(goodsUpdateDto);
-        return ResultMessageBuilder.success("修改成功");
+        return ResultMessageBuilder.success("添加成功");
     }
 
     /**

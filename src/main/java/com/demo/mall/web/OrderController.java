@@ -7,7 +7,6 @@ import com.demo.mall.entities.User;
 import com.demo.mall.service.OrderService;
 import com.demo.mall.service.TokenService;
 import com.demo.mall.utils.ResultMessageBuilder;
-import com.demo.mall.vo.CartsVo;
 import com.demo.mall.vo.OrderVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

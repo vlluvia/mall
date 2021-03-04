@@ -14,7 +14,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Data
 @ToString
-public class AdminCommentDelDao extends TokenDto{
+public class AdminCommentDelDao extends TokenDto {
 
     private int commentId;
 }

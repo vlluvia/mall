@@ -36,7 +36,7 @@ public interface AdminOrdersDao extends BaseMapper<Orders> {
             @Result(property = "isFinish", column = "is_finish"),
             @Result(property = "userId", column = "user_id"),
     })
-    List<OrderVo> queryOrdersByIsPay(@Param("payFlag") boolean payFlag,@Param("sendFlag")  boolean sendFlag);
+    List<OrderVo> queryOrdersByIsPay(@Param("payFlag") boolean payFlag, @Param("sendFlag")  boolean sendFlag);
 
     @Select("select * from orders where is_pay=#{payFlag} and is_send=#{sendFlag} and is_finish=#{finishFlag}")
     @Results({

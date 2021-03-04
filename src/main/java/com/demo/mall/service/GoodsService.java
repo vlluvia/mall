@@ -23,9 +23,9 @@ public interface GoodsService {
 
     void addGoods(GoodsAddDto goodsAddDto);
 
-    void updateGoods(GoodsUpdateDto goodsUpdateDto);
-
     AdminGoodsVo getGoodsDetailAdminById(int id);
 
     List<GoodsVo> getHotGoodsList(int id);
+
+    void updateGoods(GoodsUpdateDto goodsAddDto);
 }

@@ -5,17 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @ToString
-public class CartAddDto extends TokenDto {
+public class GoodsRangeDto {
 
-
-    private int goodsId;
-
-    private int specId;
-
-    private int count;
-
+    private  int id;
+    private String goodsType;
 }

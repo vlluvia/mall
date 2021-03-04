@@ -61,6 +61,27 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
+    public void updateGoods(GoodsUpdateDto goodsAddDto) {
+        Goods goods = new Goods();
+        goods.setId(goodsAddDto.getId());
+        goods.setGoodsDesc(goodsAddDto.getGoodsDesc());
+        goods.setGoodsName(goodsAddDto.getGoodsName());
+        goods.setGoodsSrc(goodsAddDto.getGoodsSrc());
+        goods.setGoodsTypeId(Integer.parseInt(goodsAddDto.getGoodsTypeId()));
+        goods.setPrice(goodsAddDto.getGoodsDetail().get(0).getGoodsSizePrice());
+        goodsDao.deleteGoodsDetailByGoodsId(goodsAddDto.getId());
+        goodsDao.updateGoods(goods);
+        goodsAddDto.getGoodsDetail().forEach(g -> {
+            GoodsDetail goodsDetail = new GoodsDetail();
+            goodsDetail.setGoodsId(goodsAddDto.getId());
+            goodsDetail.setGoodsSizeName(g.getGoodsSizeName());
+            goodsDetail.setGoodsSizePrice(g.getGoodsSizePrice());
+            goodsDetail.setGoodsStock(g.getGoodsStack());
+            goodsDao.addGoodsDetail(goodsDetail);
+        });
+    }
+
+    @Override
     public GoodsDetailVo getGoodsDetailById(int id) {
         Goods goods = goodsDao.findGoodsById(id);
         List<GoodsDetail> goodsDetails = goodsDao.findGoodsDetailByGoodsId(id);
@@ -125,30 +146,6 @@ public class GoodsServiceImpl implements GoodsService {
         int goodsId = goodsDao.selectByGoodsName(goods.getGoodsName());
 
         goodsAddDto.getGoodsDetail().forEach(g -> {
-            GoodsDetail goodsDetail = new GoodsDetail();
-            goodsDetail.setGoodsId(goodsId);
-            goodsDetail.setGoodsSizeName(g.getGoodsSizeName());
-            goodsDetail.setGoodsSizePrice(g.getGoodsSizePrice());
-            goodsDetail.setGoodsStock(g.getGoodsStack());
-            goodsDao.addGoodsDetail(goodsDetail);
-        });
-    }
-
-    @Override
-    public void updateGoods(GoodsUpdateDto goodsUpdateDto) {
-        System.out.println(goodsUpdateDto.getId());
-        goodsDao.deleteById(goodsUpdateDto.getId());
-        Goods goods = new Goods();
-        goods.setGoodsDesc(goodsUpdateDto.getGoodsDesc());
-        goods.setGoodsName(goodsUpdateDto.getGoodsName());
-        goods.setGoodsSrc(goodsUpdateDto.getGoodsSrc());
-        goods.setGoodsTypeId(Integer.parseInt(goodsUpdateDto.getGoodsTypeId()));
-        goods.setPrice(goodsUpdateDto.getGoodsDetail().get(0).getGoodsSizePrice());
-
-        goodsDao.updateGood(goods);
-        int goodsId = goodsDao.selectByGoodsName(goods.getGoodsName());
-
-        goodsUpdateDto.getGoodsDetail().forEach(g -> {
             GoodsDetail goodsDetail = new GoodsDetail();
             goodsDetail.setGoodsId(goodsId);
             goodsDetail.setGoodsSizeName(g.getGoodsSizeName());

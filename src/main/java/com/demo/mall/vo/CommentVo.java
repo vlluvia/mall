@@ -33,7 +33,7 @@ public class CommentVo implements Serializable {
 
     private String goodsName;
 
-    public CommentVo(Comment l,String nickname,String img) {
+    public CommentVo(Comment l, String nickname, String img) {
         this.id = l.getId();
         this.comment = l.getComment();
         this.starValue = l.getStarValue();

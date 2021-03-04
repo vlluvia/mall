@@ -2,7 +2,6 @@ package com.demo.mall.mapper;
 
 import com.demo.mall.dto.CommentDto;
 import com.demo.mall.entities.Comment;
-import com.demo.mall.entities.Goods;
 import com.demo.mall.utils.BaseMapper;
 import org.apache.ibatis.annotations.*;
 

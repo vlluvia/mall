@@ -1,6 +1,5 @@
 package com.demo.mall.vo;
 
-import com.demo.mall.dto.GoodsAddDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
